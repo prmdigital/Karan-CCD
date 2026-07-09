@@ -20,11 +20,11 @@
 </style>
 </head>
 <body>
-<div style="max-width:1600px;margin:0 auto">
+<div style="max-width:100%;margin:0 auto">
 
   <!-- header: same as home page -->
   <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:#fff">
-    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/logo.png" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
+    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
     <nav style="display:flex;align-items:center;gap:36px;font-weight:700;font-size:15.5px">
       <a href="Chilliwack Homepage - Option 1b.html" style="text-decoration:none;color:#3d2a14">About</a>
       <div class="ccd-dd" style="position:relative">
@@ -39,7 +39,7 @@
         </div></div>
       </div>
       <a href="Chilliwack Homepage - Option 1b.html" style="text-decoration:none;color:#3d2a14">First Visit</a>
-      <a href="Chilliwack Homepage - Option 1b.html" style="text-decoration:none;color:#3d2a14">Contact</a>
+      <a href="contact.html" style="text-decoration:none;color:#3d2a14">Contact</a>
       <a href="tel:6043800101" style="text-decoration:none;border:2px solid #572806;color:#572806;padding:12px 26px;border-radius:14px;font-size:15px">(604) 380-0101</a>
       <a href="#book" style="text-decoration:none;background:#572806;color:#fff;padding:14px 28px;border-radius:14px;font-size:15px">Book a Visit</a>
     </nav>
@@ -130,10 +130,10 @@
       <div style="background:#738526;border-radius:22px;padding:30px 28px;color:#fff">
         <h3 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:22px;margin:0 0 8px">Not an emergency?</h3>
         <p style="margin:0 0 20px;font-size:14.5px;color:#eaf0cf">For regular questions and bookings, send a request and we will reply within one business day.</p>
-        <form onsubmit="event.preventDefault()" style="display:grid;gap:10px">
-          <input placeholder="Parent's name" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
-          <input placeholder="Phone or email" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
-          <input placeholder="Child's name &amp; age" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
+        <form action="https://formsubmit.co/info@rmcdentistry.com" method="POST" style="display:grid;gap:10px"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_subject" value="New request - Chilliwack Children's Dentistry">
+          <input name="Parent name" required placeholder="Parent's name" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
+          <input name="Phone or email" required placeholder="Phone or email" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
+          <input name="Child name and age" placeholder="Child's name &amp; age" style="padding:13px 15px;border:none;border-radius:11px;font:600 14.5px 'Nunito Sans',sans-serif;color:#3d2a14">
           <button type="submit" style="background:#572806;color:#fff;border:none;font:800 15.5px 'Nunito Sans',sans-serif;padding:14px;border-radius:12px;cursor:pointer">Send Request</button>
         </form>
         <p style="margin:14px 0 0;font-size:12px;color:#d7e0ac;text-align:center">Not for emergencies. Please call (604) 380-0101.</p>
@@ -177,7 +177,7 @@
 
   <!-- footer: same as home page -->
   <footer style="background:#fff;padding:32px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efe9dc">
-    <img src="assets/logo.png" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto">
+    <img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto">
     <div style="display:flex;gap:28px;font-size:14px;font-weight:700">
       <a href="assets/ccd-referral-form.pdf" target="_blank" style="color:#3d2a14;text-decoration:none">Referral form (PDF)</a>
       <a href="#" style="color:#3d2a14;text-decoration:none">Privacy</a>
