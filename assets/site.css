@@ -11,6 +11,23 @@ img, iframe { max-width: 100%; }
 /* ---------- header / primary nav ---------- */
 .ccd-header { position: relative; z-index: 200; }
 
+/* Home page only: on wide monitors the 1600px content cap left a very
+   large empty gutter beside the hero/section content while the white
+   header background (correctly) still ran edge to edge. Let the
+   home page's own sections use more of the available width above the
+   tablet breakpoint; every other page keeps its original 1600px cap. */
+@media (min-width: 1025px) {
+  body.ccd-home .ccd-header,
+  body.ccd-home .ccd-hero-inner,
+  body.ccd-home .ccd-services-grid,
+  body.ccd-home .ccd-doctor-band,
+  body.ccd-home .ccd-reviews-faq,
+  body.ccd-home .ccd-cta-band,
+  body.ccd-home .ccd-footer {
+    max-width: 1920px !important;
+  }
+}
+
 .ccd-nav-toggle {
   display: none;
   align-items: center;
