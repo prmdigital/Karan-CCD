@@ -11,28 +11,35 @@ img, iframe { max-width: 100%; }
 /* ---------- header / primary nav ---------- */
 .ccd-header { position: relative; z-index: 200; }
 
-/* On wide monitors the home page's full-bleed colour bands (hero,
-   services, doctor band, reviews/FAQ, CTA) left a large empty gutter
-   beside their content while their background still ran edge to
-   edge. Those bands don't have a fixed reading-width requirement, so
-   widen them (and the home page's own header/footer, so its edges
-   still line up with the bands below it). The article/contact
-   two-column layouts on every other page are NOT included: their
-   paragraph text is deliberately capped at ~640px for readability,
-   and their photos are full-width inside the main column, so
-   stretching those containers just opens an ugly gap beside the text
-   and forces photos into far wider crops than they were shot for.
-   Those — and every other page's header/footer — stay at the
-   original 1600px cap. */
+/* On wide monitors the 1600px content cap left a large empty gutter
+   beside the header/hero/section content. Widen every page's header,
+   footer and main content layout the same amount, so the gutter is
+   unified site-wide. Paragraph text inside the article/contact
+   layouts is un-capped right below so it fills that same width
+   instead of leaving a gap beside it (see next rule). Mobile/tablet
+   (below 1025px) is untouched. */
 @media (min-width: 1025px) {
+  .ccd-header,
+  .ccd-footer,
+  .ccd-article-grid,
+  .ccd-contact-grid,
   .ccd-hero-inner,
   .ccd-services-grid,
   .ccd-doctor-band,
   .ccd-reviews-faq,
-  .ccd-cta-band,
-  body.ccd-home .ccd-header,
-  body.ccd-home .ccd-footer {
+  .ccd-cta-band {
     max-width: 1920px !important;
+  }
+
+  /* Article/contact page paragraphs were capped at ~600-640px for
+     reading comfort, which looked fine at the old 1600px cap but left
+     an increasingly large dead gap beside the (already full-width)
+     photos as the container above got wider. Match the text to the
+     column width instead. The outer grid's own 1920px cap still
+     bounds how long a line can get even on very wide monitors. */
+  .ccd-article-grid p,
+  .ccd-contact-grid p {
+    max-width: none !important;
   }
 }
 
