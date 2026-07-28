@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
   body{margin:0;background:#fff;color:#3d2a14;font-family:'Nunito Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
   input::placeholder,textarea::placeholder{color:#9a917f}
@@ -23,9 +24,12 @@
 <div style="max-width:100%;margin:0 auto">
 
   <!-- header: same as home page -->
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:#fff;max-width:1600px;margin:0 auto">
-    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
-    <nav style="display:flex;align-items:center;gap:36px;font-weight:700;font-size:16.5px">
+  <header class="ccd-header" style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:#fff;max-width:1600px;margin:0 auto">
+    <a href="index.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
+    <button type="button" class="ccd-nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3d2a14" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
+    <nav class="ccd-nav" style="display:flex;align-items:center;gap:36px;font-weight:700;font-size:16.5px">
       <a href="about.html" style="text-decoration:none;color:#3d2a14">About</a>
       <div class="ccd-dd" style="position:relative">
         <a href="#" onclick="return false" style="text-decoration:none;color:#3d2a14">Services <span style="font-size:12px">&#9662;</span></a>
@@ -44,18 +48,19 @@
       <a href="#book" style="text-decoration:none;background:#572806;color:#fff;padding:14px 28px;border-radius:14px;font-size:16px">Book a Visit</a>
     </nav>
   </header>
+  <div class="ccd-nav-scrim"></div>
 
   <!-- green intro band -->
-  <div style="background:#738526;color:#fff;padding:60px 72px 72px">
+  <div class="ccd-intro-band" style="background:#738526;color:#fff;padding:60px 72px 72px">
     <div style="max-width:1600px;margin:0 auto">
       <div style="display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#f4f7e4;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:10px;margin-bottom:22px">Get in touch</div>
-      <h1 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:56px;line-height:1.05;margin:0 0 16px">We would love to hear from you</h1>
+      <h1 class="ccd-h1" style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:56px;line-height:1.05;margin:0 0 16px">We would love to hear from you</h1>
       <p style="font-size:20px;max-width:600px;margin:0;color:#eaf0cf;text-wrap:pretty">Booking a first visit, asking a quick question, or just saying hello. Send us a note below or give us a call, and a real person will get back to you.</p>
     </div>
   </div>
 
   <!-- main: form + details -->
-  <div id="book" style="max-width:1600px;margin:0 auto;padding:64px 72px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start">
+  <div id="book" class="ccd-contact-grid" id="book" style="max-width:1600px;margin:0 auto;padding:64px 72px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start">
 
     <!-- form -->
     <div>
@@ -69,7 +74,7 @@
           <label style="display:block;font-weight:700;font-size:15.5px;margin-bottom:6px;color:#3d2a14">Parent's name *</label>
           <input class="cf-input" name="Parent name" required placeholder="Your name">
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="ccd-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div>
             <label style="display:block;font-weight:700;font-size:15.5px;margin-bottom:6px;color:#3d2a14">Email *</label>
             <input class="cf-input" name="Email" type="email" required placeholder="you@email.com">
@@ -103,19 +108,19 @@
         <h3 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:19px;margin:0 0 14px;color:#572806">Visit us</h3>
         <p style="margin:0 0 14px;font-size:16px;color:#6b5a42"><strong style="display:block;color:#572806;font-family:'Baloo 2',sans-serif;font-size:16px;margin-bottom:2px">Location</strong>Unit 10-11, 8989 Young Road,<br>Chilliwack, BC V2P 4RP</p>
         <p style="margin:0 0 14px;font-size:16px;color:#6b5a42"><strong style="display:block;color:#572806;font-family:'Baloo 2',sans-serif;font-size:16px;margin-bottom:2px">Hours</strong>Monday to Friday, 8 am to 4 pm<br>Closed weekends</p>
-        <p style="margin:0;font-size:16px;color:#6b5a42"><strong style="display:block;color:#572806;font-family:'Baloo 2',sans-serif;font-size:16px;margin-bottom:2px">Email</strong><a href="mailto:info@rmcdentistry.com" style="color:#738526;text-decoration:none;font-weight:700">info@rmcdentistry.com</a></p>
+        <p style="margin:0;font-size:16px;color:#6b5a42"><strong style="display:block;color:#572806;font-family:'Baloo 2',sans-serif;font-size:16px;margin-bottom:2px">Email</strong><a href="mailto:info@ccdentistry.kids" style="color:#738526;text-decoration:none;font-weight:700">info@ccdentistry.kids</a></p>
       </div>
     </aside>
   </div>
 
   <!-- map full width -->
-  <div style="max-width:1600px;margin:0 auto;padding:0 72px 80px">
+  <div class="ccd-px-72" style="max-width:1600px;margin:0 auto;padding:0 72px 80px">
     <iframe title="Map to Chilliwack Children's Dentistry" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s8989%20Young%20Road%2C%20Chilliwack%2C%20BC!6i15" style="width:100%;height:360px;border:none;border-radius:22px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <!-- footer: same as home page -->
-  <footer style="background:#fff;padding:32px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efe9dc;max-width:1600px;margin:0 auto">
-    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto;display:block"></a>
+  <footer class="ccd-footer" style="background:#fff;padding:32px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efe9dc;max-width:1600px;margin:0 auto">
+    <a href="index.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto;display:block"></a>
     <div style="display:flex;gap:28px;font-size:15px;font-weight:700">
       <a href="assets/ccd-referral-form.pdf" target="_blank" style="color:#3d2a14;text-decoration:none">Referral form (PDF)</a>
       <a href="#" style="color:#3d2a14;text-decoration:none">Privacy</a>
@@ -125,5 +130,6 @@
   </footer>
 
 </div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

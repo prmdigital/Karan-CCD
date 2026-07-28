@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
   body{margin:0;background:#fff;color:#3d2a14;font-family:'Nunito Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
   input::placeholder{color:#9a917f}
@@ -23,9 +24,12 @@
 <div style="max-width:100%;margin:0 auto">
 
   <!-- header: same as home page -->
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:#fff;max-width:1600px;margin:0 auto">
-    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
-    <nav style="display:flex;align-items:center;gap:36px;font-weight:700;font-size:16.5px">
+  <header class="ccd-header" style="display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:#fff;max-width:1600px;margin:0 auto">
+    <a href="index.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:58px;width:auto;display:block"></a>
+    <button type="button" class="ccd-nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3d2a14" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
+    <nav class="ccd-nav" style="display:flex;align-items:center;gap:36px;font-weight:700;font-size:16.5px">
       <a href="about.html" style="text-decoration:none;color:#3d2a14">About</a>
       <div class="ccd-dd" style="position:relative">
         <a href="#" onclick="return false" style="text-decoration:none;color:#3d2a14">Services <span style="font-size:12px">&#9662;</span></a>
@@ -44,21 +48,22 @@
       <a href="#book" style="text-decoration:none;background:#572806;color:#fff;padding:14px 28px;border-radius:14px;font-size:16px">Book a Visit</a>
     </nav>
   </header>
+  <div class="ccd-nav-scrim"></div>
 
   <!-- article layout: main column + sticky sidebar -->
-  <div style="max-width:1600px;margin:0 auto;padding:44px 72px 90px;display:grid;grid-template-columns:1fr 350px;gap:70px;align-items:start">
+  <div class="ccd-article-grid" style="max-width:1600px;margin:0 auto;padding:44px 72px 90px;display:grid;grid-template-columns:1fr 350px;gap:70px;align-items:start">
 
     <!-- main column -->
     <main>
       <nav style="font-size:15px;font-weight:700;margin-bottom:28px;color:#9a917f">
-        <a href="Chilliwack Homepage - Option 1b.html" style="color:#738526;text-decoration:none">Home</a>
+        <a href="index.html" style="color:#738526;text-decoration:none">Home</a>
         <span style="margin:0 8px;color:#d9cfba">/</span>
         <span style="color:#738526">Services</span>
         <span style="margin:0 8px;color:#d9cfba">/</span>
         <span>Digital X-Rays</span>
       </nav>
 
-      <h1 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:52px;line-height:1.08;margin:0 0 10px;color:#572806">Digital X-Rays</h1>
+      <h1 class="ccd-h1" style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:52px;line-height:1.08;margin:0 0 10px;color:#572806">Digital X-Rays</h1>
       <svg width="180" height="12" viewBox="0 0 180 12" aria-hidden="true" style="display:block;margin:0 0 26px"><path d="M2 9 Q30 2 60 7 T118 6 T178 5" stroke="#738526" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
 
       <p style="font-size:18.5px;color:#5a4a33;margin:0 0 16px;max-width:640px;text-wrap:pretty">Digital x-rays are one of the most valuable diagnostic tools a pediatric dentist has. They let us follow your child's dental development over time and show us what an eye exam alone never could.</p>
@@ -70,7 +75,7 @@
       <!-- benefits -->
       <h2 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:30px;margin:0 0 8px;color:#3d2a14">What x-rays let us see</h2>
       <p style="margin:0 0 22px;color:#6b5a42;font-size:17px;max-width:640px">A dental x-ray builds a complete picture of your child's mouth, above and below the gum line. Dr. Anu uses these images to:</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:48px">
+      <div class="ccd-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:48px">
         <div style="background:#FBF8F1;border-radius:18px;padding:24px 26px">
           <div style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:16px;color:#738526;margin-bottom:6px">FOLLOW ERUPTION</div>
           <p style="margin:0;font-size:16.5px;color:#6b5a42">Watch how adult teeth are moving in as they develop, and check that everything is arriving on schedule and in the right place.</p>
@@ -98,7 +103,7 @@
       </div>
 
       <!-- meet dr anu -->
-      <div style="background:#FBF4E8;border-radius:22px;padding:40px;display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center;margin-bottom:48px">
+      <div class="ccd-doctor-band" style="background:#FBF4E8;border-radius:22px;padding:40px;display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center;margin-bottom:48px">
         <img src="assets/dr-anu.jpg" alt="Dr. Anu Korada, pediatric dentist" style="width:100%;height:300px;object-fit:cover;object-position:top;border-radius:18px;display:block">
         <div>
           <div style="color:#a8743d;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">Meet your dentist</div>
@@ -110,7 +115,7 @@
     </main>
 
     <!-- sticky sidebar -->
-    <aside style="position:sticky;top:24px;display:grid;gap:20px">
+    <aside class="ccd-sidebar" style="position:sticky;top:24px;display:grid;gap:20px">
       <div id="book" style="background:#738526;border-radius:22px;padding:30px 28px;color:#fff">
         <h3 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:22px;margin:0 0 8px">Book a visit</h3>
         <p style="margin:0 0 20px;font-size:15.5px;color:#eaf0cf">We reply within one business day. Happy to talk through how imaging works and what your child may need.</p>
@@ -149,8 +154,8 @@
   </div>
 
   <!-- slim CTA strip -->
-  <div style="padding:0 72px 70px">
-    <div style="max-width:1600px;margin:0 auto;background:#572806;border-radius:26px;padding:44px 52px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+  <div class="ccd-px-72" style="padding:0 72px 70px">
+    <div class="ccd-cta-strip" style="max-width:1600px;margin:0 auto;background:#572806;border-radius:26px;padding:44px 52px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
       <div>
         <h2 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:30px;margin:0 0 6px;color:#fff">See the full picture of your child's smile.</h2>
         <p style="margin:0;font-size:16.5px;color:#d9c3a6">Unit 10-11, 8989 Young Road, Chilliwack, BC. Monday to Friday, 8 am to 4 pm.</p>
@@ -160,8 +165,8 @@
   </div>
 
   <!-- footer: same as home page -->
-  <footer style="background:#fff;padding:32px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efe9dc;max-width:1600px;margin:0 auto">
-    <a href="Chilliwack Homepage - Option 1b.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto;display:block"></a>
+  <footer class="ccd-footer" style="background:#fff;padding:32px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efe9dc;max-width:1600px;margin:0 auto">
+    <a href="index.html"><img src="assets/ccd-logo.svg" alt="Chilliwack Children Dentistry logo" style="height:48px;width:auto;display:block"></a>
     <div style="display:flex;gap:28px;font-size:15px;font-weight:700">
       <a href="assets/ccd-referral-form.pdf" target="_blank" style="color:#3d2a14;text-decoration:none">Referral form (PDF)</a>
       <a href="#" style="color:#3d2a14;text-decoration:none">Privacy</a>
@@ -171,5 +176,6 @@
   </footer>
 
 </div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
